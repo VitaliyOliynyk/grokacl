@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 
 
 /**
- * Created by xaoc on 19.09.17.
+ * Created by Vitaliy Oliynyk  on 19.09.17.
  */
 public class GrokAcl implements IAuthorizationPlugin {
     @Override
