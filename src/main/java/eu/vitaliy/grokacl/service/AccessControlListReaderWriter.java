@@ -1,6 +1,7 @@
-package eu.vitaliy.grokacl.model;
+package eu.vitaliy.grokacl.service;
 
 import com.google.gson.Gson;
+import eu.vitaliy.grokacl.model.AccessControlList;
 
 import java.io.IOException;
 import java.nio.file.Files;
