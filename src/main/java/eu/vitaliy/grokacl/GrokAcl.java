@@ -1,4 +1,5 @@
 package eu.vitaliy.grokacl;
+import eu.vitaliy.grokacl.service.AccessControlListService;
 import org.opensolaris.opengrok.authorization.IAuthorizationPlugin;
 import org.opensolaris.opengrok.configuration.Group;
 import org.opensolaris.opengrok.configuration.Project;
@@ -10,19 +11,23 @@ import javax.servlet.http.HttpServletRequest;
  * Created by Vitaliy Oliynyk  on 19.09.17.
  */
 public class GrokAcl implements IAuthorizationPlugin {
+    private AccessControlListService accessControlListService;
+
     @Override
     public void load() {
-        System.out.println("Hello! load");
+        Context context = new Context();
+        accessControlListService = context.getAccessControlListService();
+        accessControlListService.loadAccessControlList();
     }
 
     @Override
     public void unload() {
-        System.out.println("Hello! unload");
+        /* nothing */
     }
 
     @Override
     public boolean isAllowed(HttpServletRequest httpServletRequest, Project project) {
-        return true;
+        return accessControlListService.isAllowed(project.getPath());
     }
 
     @Override
