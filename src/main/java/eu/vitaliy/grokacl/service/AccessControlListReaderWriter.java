@@ -2,6 +2,7 @@ package eu.vitaliy.grokacl.service;
 
 import com.google.gson.Gson;
 import eu.vitaliy.grokacl.model.AccessControlList;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -12,11 +13,14 @@ import java.nio.file.Paths;
  */
 public class AccessControlListReaderWriter {
     private Gson gson = new Gson();
+
+    @Value("#{environment.OPENGROK_ACL_PATH}")
     private String fileName;
 
-    public AccessControlListReaderWriter(String fileName) {
-        this.fileName = fileName;
+
+    public AccessControlListReaderWriter() {
     }
+
 
     public AccessControlList readAccessControlList() {
         try {
