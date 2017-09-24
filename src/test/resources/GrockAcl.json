@@ -1,0 +1,17 @@
+{
+  "controlList": [
+    {
+      "group": "group1",
+      "paths": [
+        "/systemA/.*$"
+      ]
+    },
+    {
+      "group": "group2",
+      "paths": [
+        "/systemA/.*$",
+        "/systemB/.*$"
+      ]
+    }
+  ]
+}

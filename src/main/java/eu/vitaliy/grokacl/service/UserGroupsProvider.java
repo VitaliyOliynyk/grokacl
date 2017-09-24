@@ -1,4 +1,4 @@
-package eu.vitaliy.grokacl.model;
+package eu.vitaliy.grokacl.service;
 
 import java.util.Collection;
 
