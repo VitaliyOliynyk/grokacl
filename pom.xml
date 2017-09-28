@@ -8,7 +8,7 @@
   </parent>
 
   <groupId>eu.vitaliy</groupId>
-  <artifactId>grockacl</artifactId>
+  <artifactId>grokacl</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
